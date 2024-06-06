@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Appointments - ECare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ECare</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="appointments.html">My Appointments</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <aside>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="appointments.html">My Appointments</a></li>
+            </ul>
+        </aside>
+        <section class="appointments">
+            <h2>My Appointments</h2>
+            <div class="new-appointment">
+                <button id="newAppointment">+ New Appointment</button>
+            </div>
+            <div class="appointment-list">
+                <div class="appointment">
+                    <span class="date">June 10, 2024</span>
+                    <span class="time">10:00 AM</span>
+                    <span class="purpose">Checkup</span>
+                    <button class="delete">Delete</button>
+                </div>
+                <!-- More appointments can be added here -->
+            </div>
+        </section>
+        <section class="graph">
+            <!-- Graph goes here -->
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ECare. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

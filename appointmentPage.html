@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECare - Online Appointment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" integrity="sha512-F1C4lPo9KQF2n7Ibu5A6WB0ZpIf3vWdoCpY+JJHrk5EX2ch7u8wLlK8+U9yB3YX1wBFUkz8asawMTLDv5WInCg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ECare</h1>
+            <div class="user-info">
+                <span id="userType">Doctor</span> <!-- Change to Patient as needed -->
+                <button id="logout">Log Out</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="calendar-container">
+            <h2>Check Appointment Availability</h2>
+            <div id="calendar"></div>
+        </div>
+        <div class="appointment-container">
+            <h2>Book an Appointment</h2>
+            <form id="appointmentForm">
+                <div class="form-group">
+                    <label for="appointmentDate">Appointment Date:</label>
+                    <input type="date" id="appointmentDate" name="appointmentDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="appointmentTime">Appointment Time:</label>
+                    <input type="time" id="appointmentTime" name="appointmentTime" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="birthdate">Birthdate:</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactNumber">Contact Number:</label>
+                    <input type="tel" id="contactNumber" name="contactNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="purpose">Purpose of Appointment:</label>
+                    <textarea id="purpose" name="purpose" rows="4" required></textarea>
+                </div>
+                <button type="submit">Book Appointment</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ECare. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7mr6i8F+9lb1mgj5j1GphOl6C7x4zfl8sXJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFjBg8YfTZhbTeK/oe8z1ErhCzPZIXQ6Dk80xjnEMwItHDK9nqHCKn5XlsQX/h6MfN9GstHWwlzjtw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js" integrity="sha512-Bm6d+RYLk5IjUWXdf3EtBpp/2GnSeRZ+3bIZNUxEs1UYjXJAYNOEHKQtKNqfQldTCs8ja1Txy8M+PWBpY80NbQ==" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+    <script>
+        // JavaScript code
+        $(document).ready(function() {
+            // Appointment form submission
+            $('#appointmentForm').submit(function(event) {
+                event.preventDefault();
+                // Check if the date is available
+                var appointmentDate = $('#appointmentDate').val();
+                // Perform your check here, for example, check against a list of booked dates
+                var isAvailable = true; // Assume it's available for now
+                if (!isAvailable) {
+                    alert('Sorry, this date is not available. Please choose another date.');
+                } else {
+                    // Proceed with the form submission
+                    alert('Appointment booked successfully!');
+                    // You can submit the form using AJAX or navigate to another page
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+/* Basic styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #4caf50; /* Add this line */
+    padding: 10px 20px; /* Add this line */
+    border-radius: 5px; /* Add this line */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li.active a {
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+}
+
+aside {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+}
+
+aside ul {
+    padding: 0;
+    margin: 0;
+}
+
+aside ul li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+aside ul li:hover {
+    background-color: #555;
+}
+
+aside ul li.active {
+    background-color: #4caf50;
+}
+
+section {
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    background-color: #4caf50;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Appointment styles */
+
+.appointments {
+    margin-right: 20px;
+}
+
+.new-appointment {
+    margin-bottom: 20px;
+}
+
+.new-appointment button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.new-appointment button:hover {
+    background-color: #45a049;
+}
+
+.appointment-list {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.appointment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.appointment span {
+    margin-right: 10px;
+}
+
+.delete {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete:hover {
+    background-color: #cc372c;
+}
